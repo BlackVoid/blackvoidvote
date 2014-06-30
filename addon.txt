@@ -1,0 +1,11 @@
+"AddonInfo"
+{
+	"name"				"BlackVoid Vote"
+	"version"			"1"
+	"up_date"			""
+	"author_name"		"BlackVoid"
+	"author_email"		"blackvoid@fantas.in"
+	"author_url"		"https://fantas.in"
+	"info"				"A voting system"
+	"override"			"0"
+}
