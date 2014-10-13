@@ -1,6 +1,6 @@
 # BlackVoid Vote
 
-This is a simple voting system for Garrysmod, which provides an API for other addons/gamemdoes to start votes.
+This is a simple voting system for Garrysmod, which provides an API for other addons/gamemodes to start votes.
 
 Feel free to modify and send pull requests.
 
