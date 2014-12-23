@@ -72,7 +72,7 @@ hook.Add("PlayerSay", "BVVote_RTV", function(ply, text, teamChat)
 			BVVoteCallRTV()
 		else
 			for k,v in pairs(player.GetAll()) do
-				ply:ChatPrint("Map will change next round to '" .. next_map .. "'")
+				v:ChatPrint("Map will change next round to '" .. next_map .. "'")
 			end
 			force_change = true
 		end
@@ -95,14 +95,14 @@ hook.Add("PlayerSay", "BVVote_RTV", function(ply, text, teamChat)
 	if math.max(-1, percent - count) == -1 then return end
 
 	for k,v in pairs(player.GetAll()) do
-		ply:ChatPrint(ply:Nick() .. " wants to RTV. " .. math.max(0, percent - count) .. " more needed to RTV. Type /rtv to RTV")
+		v:ChatPrint(ply:Nick() .. " wants to RTV. " .. math.max(0, percent - count) .. " more needed to RTV. Type /rtv to RTV")
 	end
 	if count >= percent then
 		if #next_map == 0 then
 			BVVoteCallRTV()
 		else
 			for k,v in pairs(player.GetAll()) do
-				ply:ChatPrint("Map will change next round to '" .. next_map .. "'")
+				v:ChatPrint("Map will change next round to '" .. next_map .. "'")
 			end
 			force_change = true
 		end
@@ -131,7 +131,7 @@ function BVVoteCallRTV()
 	voteNextMap = !BVVote.StartVote(player.GetAll(), "Next map", Options , 10, function(plTbl, option)
 
 		for k, ply in pairs( player.GetAll() ) do
-			ply:ChatPrint( option.value .. " won with " .. tostring(option.votes) .. " vote" .. (option.votes == 1 and "" or "s") ..". Map will change next round." )
+			v:ChatPrint( option.value .. " won with " .. tostring(option.votes) .. " vote" .. (option.votes == 1 and "" or "s") ..". Map will change next round." )
 		end
 		next_map = option.id
 		force_change = true
